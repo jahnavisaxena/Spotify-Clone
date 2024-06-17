@@ -4,512 +4,399 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
-    <style>
-        .header1 {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            border-color: white;
-            border-width: 3px;
-            height: 63px;
-            align-items: center;
-        }
-        .right-section {
-            margin-left: 10px;
-            flex: 1;
-            display: flex;
-            align-items: center;
-        }
-        .left-section {
-            margin-right: 8px;
-        }
-        .back, .next {
-            border: none;
-            background-color: rgba(0, 0, 0, .7);
-            color: white;
-            border-radius: 50%;
-            height: 48px;
-            width: 48px;
-            cursor: pointer;
-        }
-        .explore {
-            height: 32px;
-            width: 142px;
-            border-radius: 20px;
-            border: none;
-            background-color: white;
-            color: black;
-            font-weight: bold;
-            font-family: Roboto, Arial;
-            font-size: 14px;
-            cursor: pointer;
-        }
-        .install {
-            background-color: rgba(0, 0, 0, 0.54);
-            height: 32px;
-            width: 114px;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            color: white;
-            font-weight: bold;
-            font-family: Roboto, Arial;
-            font-size: 14px;
-            
-        }
-        .header2 {
-            height: 56px;
-            display: flex;
-            flex: 1;
-            align-items: center;
-            justify-content: space-between;
-            margin-right: 8px;
-            
-        }
-        .buttons {
-            height: 40px;
-            width: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .all, .music, .pod {
-            background-color: rgba(255, 255, 255, 0.07);
-            padding: 6px 14px;
-            border: none;
-            border-radius: 20px;
-            font-weight: 400;
-            font-family: CircularSp, "Helvetica Neue", helvetica, arial;
-            height: 24px;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .song-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px; 
-        }
-        .song-preview {
-            background-color: rgba(255, 255, 255, 0.2);
-            display: flex;
-            align-items: center;
-            border-radius: 4px;
-        }
-        .song-photo {
-            margin-right: 10px;
-        }
-        .cover {
-            display:flex;
-            width: 48px;
-            height: 48px;
-            border-radius: 4px;
-        }
-        .title {
-            font-weight: 400;
-            font-size: 15px;
-            color: white;
-        }
-        p {
-            margin: 0;
-            font-size: 15px;
-            font-weight: bold;
-            font-family: Arial;
-            color: white;
-        }
-        .User-name{
-            margin-top:30px;
-            display:flex;
-            align-items:flex-end;
-            height:60px;
-            justify-content:space-between;
-        }
-        .Riya{
-            display:flex;
-            flex:1;
-        }
-        .Show{
-            display:flex;
-        }
-        .h1{
-            color:white;
-            font-size:24px;
-        }
-        .h1:hover{
-            text-decoration:underline;
-            cursor:pointer;
-        }
-        .h2{
-            color:rgb(179, 179, 179);
-            font-size:14px;
-        }
-        .album{
-            object-fit:cover;
-            object-position: center;
-        }
-        .album-pic{
-            width:90%;
-            border-radius:4px;
-            object-fit :cover;
-            object-position :50% 50%;
-        }
-        .grid-album{
-            display:grid;
-            grid-template-columns: repeat(6,183px);
-            column-gap:12px; 
-            
-        }
-        .box-card{
-            height:256px;
-            width:183px;
-            padding: 12px 12px 12px 12px;
-        }
-        .info{
-            margin-top:8px;
-            width:159px;
-            height:64px;
-        }
-        .sub1,.sub2{
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            
-        }
-        .title1{
-            font-size:16px;
-            font-family:Arial;
-            color:white;
-            font-weight:bold;
-            margin-bottom:3px;
-        }
-        .details{
-            color:rgb(167, 167, 167);
-            font-size:14px;
-            line-height:20px;
-            font-weight:normal;
-        }
-        .artist-pic{
-            width:160px;
-            height:160px;
-            border-radius:80px;
-            object-fit :cover;
-            object-position :50% 50%;
-        }
-
-        
-    </style>
+    <link rel="stylesheet" href="styles/style.css">      
 </head>
-<body style="background:linear-gradient(green 5%,black 20%); height:1000px;">
-    <div class="header1">
-        <div class="right-section">
-            <div class="back-for">
-                <button class="back"> < </button>
-                <button class="next"> > </button>
+<body>
+<div class="page">
+        <div class="sidebar">
+            <div class="first">
+                <div class="home">
+                    <div class="home-1">
+                        <img class="ghar" src="SVG/home.svg" >
+                    </div>
+                    <div class="search-1">
+                        <div>
+                            <img class="search" src="8666693_search_icon.svg">
+                        </div>
+                    </div>            
+                </div>
+            </div>
+            <div class="sec">
+                <div class="rest">
+                    <div class="lib">
+                        <div>
+                            <div class="lib-1">
+                                <img class="ghar"src="library_icon.png">
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="songs">
+                        <div class="songs-1">
+                            <div class="container">
+                                <img class="lib-pic"src="Cover-pic/icon-6.jpeg">
+                            </div>
+                            <div class="container">
+                                <img class="lib-pic"src="Cover-pic/icon-2.jpeg">
+                            </div>
+                            <div class="container">
+                                <img class="lib-pic"src="Cover-pic/icon-3.jpeg">
+                            </div>
+                            <div class="container">
+                                <img class="lib-pic"src="Cover-pic/icon-4.jpeg">
+                            </div>
+                            <div class="container">
+                                <img class="lib-pic"src="Cover-pic/icon-5.jpeg">
+                            </div>
+                            <div class="container">
+                                <img class="lib-pic"src="Cover-pic/icon-1.jpeg">
+                            </div>
+                            <div class="container">
+                                <img class="lib-pic"src="Cover-pic/icon-7.jpeg">
+                            </div>
+                            <div class="container">
+                                <img class="lib-pic"src="Cover-pic/icon-8.png">
+                            </div>
+                            <div class="container">
+                                <img class="lib-pic"src="icon-9.webp">
+                            </div>
+                            <div class="container">
+                                <img class="lib-pic"src="Cover-pic/icon-10.webp">
+                            </div>
+                            <div class="container">
+                                <img class="lib-pic"src="Cover-pic/icon-11.webp">
+                            </div>
+                            <div class="container">
+                                <img class="lib-pic"src="Cover-pic/icon-13.jpeg">
+                            </div>
+                        </div>
+                        
+                       
+                        
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="left-section">
-            <button class="explore">Explore Premium</button>
-            <button class="install">Install App</button>
+    <div class="main">
+        <div class="header1">
+            <div class="right-section">
+                <div class="back-for">
+                    <button title="Backward" class="back"> 
+                        <img class="for" src="backward_icon.png">
+                    </button>
+                    <button  title="Forward" class="next"> 
+                        <img class="for"src="forward_icon.png">
+                    </button>
+                </div>
+            </div>
+            <div class="left-section">
+                <button class="explore">Explore Premium</button>
+                <button class="install">Install App</button>
+            </div>
         </div>
-    </div>
+    
+        <div class="header2">
+            <div class="buttons">
+                <button class="all">All</button>
+                <button class="music">Music</button>
+                <button class="pod">Podcast</button>
+            </div>
+        </div>
 
-    <div class="header2">
-        <div class="buttons">
-            <button class="all">All</button>
-            <button class="music">Music</button>
-            <button class="pod">Podcast</button>
+        <div class="song-grid">
+            <div class="song-preview">
+                <div class="song-photo">
+                    <img class="cover" src="Cover-pic/icon-1.jpeg" alt="Jab tak Hai Jaan">
+                </div>
+                <div class="title">
+                    <p>Jab tak Hai Jaan</p>
+                </div>
+            </div>
+    
+            <div class="song-preview">
+                <div class="song-photo">
+                    <img class="cover" src="Cover-pic/icon-3.jpeg" alt="Sadda Haq">
+                </div>
+                <div class="title">
+                    <p>Sadda Haq</p>
+                </div>
+            </div>
+    
+            <div class="song-preview">
+                <div class="song-photo">
+                    <img class="cover" src="Cover-pic/icon-2.jpeg" alt="Sakal Ban">
+                </div>
+                <div class="title">
+                    <p>Sakal Ban</p>
+                </div>
+            </div>
+    
+            <div class="song-preview">
+                <div class="song-photo">
+                    <img class="cover" src="Cover-pic/icon-4.jpeg" alt="Bollywood Central">
+                </div>
+                <div class="title">
+                    <p>Bollywood Central</p>
+                </div>
+            </div>
+    
+            <div class="song-preview">
+                <div class="song-photo">
+                    <img class="cover" src="Cover-pic/icon-5.jpeg" alt="Masoom Dil">
+                </div>
+                <div class="title">
+                    <p>Masoom Dil Hai Mera</p>
+                </div>
+            </div>
+    
+            <div class="song-preview">
+                <div class="song-photo">
+                    <img class="cover" src="Cover-pic/icon-7.jpeg" alt="Teri Deewani">
+                </div>
+                <div class="title">
+                    <p>Teri Deewani</p>
+                </div>
+            </div>
+    
+            <div class="song-preview">
+                <div class="song-photo">
+                    <img class="cover" src="Cover-pic/icon-6.jpeg" alt="tu kya jaane">
+                </div>
+                <div class="title">
+                    <p>Tu kya jaane</p>
+                </div>
+            </div>
+    
+            <div class="song-preview">
+                <div class="song-photo">
+                    <img class="cover" src="Cover-pic/icon-8.png" alt="Liked songs">
+                </div>
+                <div class="title">
+                    <p>Liked Songs</p>
+                </div>
+            </div>
+        </div>
+    
+    <div class="User-name">
+        <div class="Riya">
+            <p class="h1">Made For Riya</p>
+        </div>
+        <div class="Show">
+            <p class="h2">Show all</p>
         </div>
     </div>
     
-    <div class="song-grid">
-        <div class="song-preview">
-            <div class="song-photo">
-                <img class="cover" src="Cover-pic/icon-1.jpeg" alt="Jab tak Hai Jaan">
-            </div>
-            <div class="title">
-                <p>Jab tak Hai Jaan</p>
-            </div>
-        </div>
-
-        <div class="song-preview">
-            <div class="song-photo">
-                <img class="cover" src="Cover-pic/icon-3.jpeg" alt="Sadda Haq">
-            </div>
-            <div class="title">
-                <p>Sadda Haq</p>
+    <div class="grid-album">
+        <div class="box-card">
+            <div class="card-button">
+                <div class="album">
+                    <img class="album-pic" src="Album/album-1.jpeg">
+                </div>
+                <div class="info">
+                    <div class="sub1">
+                        <p class="title1">Daily Mix 1</p>
+                    </div>
+                    <div class="sub2">
+                        <p class="details">Pritam,Anirudh Ravichandar,Sanjay</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="song-preview">
-            <div class="song-photo">
-                <img class="cover" src="Cover-pic/icon-2.jpeg" alt="Sakal Ban">
-            </div>
-            <div class="title">
-                <p>Sakal Ban</p>
-            </div>
-        </div>
-
-        <div class="song-preview">
-            <div class="song-photo">
-                <img class="cover" src="Cover-pic/icon-4.jpeg" alt="Bollywood Central">
-            </div>
-            <div class="title">
-                <p>Bollywood Central</p>
+    
+        <div class="box-card">
+            <div class="card-button">
+                <div class="album">
+                    <img class="album-pic" src="Album/album-2.jpeg">
+                </div>
+                <div class="info">
+                    <div class="sub1">
+                        <p class="title1">Daily Mix 2</p>
+                    </div>
+                    <div class="sub2">
+                        <p class="details">Shankar-Ehsaan-Loy,A.R.Rahman</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="song-preview">
-            <div class="song-photo">
-                <img class="cover" src="Cover-pic/icon-5.jpeg" alt="Masoom Dil">
-            </div>
-            <div class="title">
-                <p>Masoom Dil Hai Mera</p>
-            </div>
-        </div>
-
-        <div class="song-preview">
-            <div class="song-photo">
-                <img class="cover" src="Cover-pic/icon-7.jpeg" alt="Teri Deewani">
-            </div>
-            <div class="title">
-                <p>Teri Deewani</p>
+    
+        <div class="box-card">
+            <div class="card-button">
+                <div class="album">
+                    <img class="album-pic" src="Album/album-3.jpeg">
+                </div>
+                <div class="info">
+                    <div class="sub1">
+                        <p class="title1">Daily Mix 3</p>
+                    </div>
+                    <div class="sub2">
+                        <p class="details">Sachin-Jigar,Darshan Raval,Meet Bros.</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="song-preview">
-            <div class="song-photo">
-                <img class="cover" src="Cover-pic/icon-6.jpeg" alt="tu kya jaane">
-            </div>
-            <div class="title">
-                <p>Tu kya jaane</p>
+    
+        <div class="box-card">
+            <div class="card-button">
+                <div class="album">
+                    <img class="album-pic" src="Album/album-4.jpeg">
+                </div>
+                <div class="info">
+                    <div class="sub1">
+                        <p class="title1">Daily Mix 4</p>
+                    </div>
+                    <div class="sub2">
+                        <p class="details">Lata Mangeshkar,Kishore Kumar</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="song-preview">
-            <div class="song-photo">
-                <img class="cover" src="Cover-pic/icon-8.png" alt="Liked songs">
+    
+        <div class="box-card">
+            <div class="card-button">
+                <div class="album">
+                    <img class="album-pic" src="Album/album-5.jpeg">
+                </div>
+                <div class="info">
+                    <div class="sub1">
+                        <p class="title1">Daily Mix 5</p>
+                    </div>
+                    <div class="sub2">
+                        <p class="details">Atif Aslam,Kailash Khair,Salman Ali </p>
+                    </div>
+                </div>
             </div>
-            <div class="title">
-                <p>Liked Songs</p>
+        </div>
+    
+        <div class="box-card">
+            <div class="card-button">
+                <div class="album">
+                    <img class="album-pic" src="Album/album-6.jpeg">
+                </div>
+                <div class="info">
+                    <div class="sub1">
+                        <p class="title1">Daily Mix 6</p>
+                    </div>
+                    <div class="sub2">
+                        <p class="details">A.P.Dhillon,Diljit Singh,Jonita Gandhi</p>
+                    </div>
+                </div>
             </div>
+        </div>  
+    </div>
+    
+    <div class="User-name">
+        <div class="Riya">
+            <p class="h1">Your favourite artistes</p>
+        </div>
+        <div class="Show">
+            <p class="h2">Show all</p>
         </div>
     </div>
-
-<div class="User-name">
-    <div class="Riya">
-        <p class="h1">Made For Riya</p>
+    
+    <div class="grid-album">
+        <div class="box-card">
+            <div class="card-button">
+                <div class="album">
+                    <img class="artist-pic" src="artists/artist-1.jpeg">
+                </div>
+                <div class="info">
+                    <div class="sub1">
+                        <p class="title1">Shreya Ghoshal</p>
+                    </div>
+                    <div class="sub2">
+                        <p class="details">Artist</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+     
+        <div class="box-card">
+            <div class="card-button">
+                <div class="album">
+                    <img class="artist-pic" src="artists/artist-2.jpeg">
+                </div>
+                <div class="info">
+                    <div class="sub1">
+                        <p class="title1">Kishore Kumar</p>
+                    </div>
+                    <div class="sub2">
+                        <p class="details">Artist</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    
+        <div class="box-card">
+            <div class="card-button">
+                <div class="album">
+                    <img class="artist-pic" src="artists/artist-3.jpeg">
+                </div>
+                <div class="info">
+                    <div class="sub1">
+                        <p class="title1">Lata Mangeshkar</p>
+                    </div>
+                    <div class="sub2">
+                        <p class="details">Artist</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    
+        <div class="box-card">
+            <div class="card-button">
+                <div class="album">
+                    <img class="artist-pic" src="artists/artist-4.jpeg">
+                </div>
+                <div class="info">
+                    <div class="sub1">
+                        <p class="title1">Sunidhi Chauhan</p>
+                    </div>
+                    <div class="sub2">
+                        <p class="details">Artist</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    
+        <div class="box-card">
+            <div class="card-button">
+                <div class="album">
+                    <img class="artist-pic" src="artists/artist-5.jpeg">
+                </div>
+                <div class="info">
+                    <div class="sub1">
+                        <p class="title1">Mika Singh</p>
+                    </div>
+                    <div class="sub2">
+                        <p class="details">Artist</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    
+        <div class="box-card">
+            <div class="card-button">
+                <div class="album">
+                    <img class="artist-pic" src="artists/artist-6.jpeg">
+                </div>
+                <div class="info">
+                    <div class="sub1">
+                        <p class="title1">Jonita Gandhi</p>
+                    </div>
+                    <div class="sub2">
+                        <p class="details">Artist</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    
     </div>
-    <div class="Show">
-        <p class="h2">Show all</p>
+    
+    
     </div>
-</div>
-
-<div class="grid-album">
-    <div class="box-card">
-        <div class="card-button">
-            <div class="album">
-                <img class="album-pic" src="Album/album-1.jpeg">
-            </div>
-            <div class="info">
-                <div class="sub1">
-                    <p class="title1">Daily Mix 1</p>
-                </div>
-                <div class="sub2">
-                    <p class="details">Pritam,Anirudh Ravichandar,Sanjay</p>
-                </div>
-            </div>
-        </div>
     </div>
-
-    <div class="box-card">
-        <div class="card-button">
-            <div class="album">
-                <img class="album-pic" src="Album/album-2.jpeg">
-            </div>
-            <div class="info">
-                <div class="sub1">
-                    <p class="title1">Daily Mix 2</p>
-                </div>
-                <div class="sub2">
-                    <p class="details">Shankar-Ehsaan-Loy,A.R.Rahman</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="box-card">
-        <div class="card-button">
-            <div class="album">
-                <img class="album-pic" src="Album/album-3.jpeg">
-            </div>
-            <div class="info">
-                <div class="sub1">
-                    <p class="title1">Daily Mix 3</p>
-                </div>
-                <div class="sub2">
-                    <p class="details">Sachin-Jigar,Darshan Raval,Meet Bros.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="box-card">
-        <div class="card-button">
-            <div class="album">
-                <img class="album-pic" src="Album/album-4.jpeg">
-            </div>
-            <div class="info">
-                <div class="sub1">
-                    <p class="title1">Daily Mix 4</p>
-                </div>
-                <div class="sub2">
-                    <p class="details">Lata Mangeshkar,Kishore Kumar</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="box-card">
-        <div class="card-button">
-            <div class="album">
-                <img class="album-pic" src="Album/album-5.jpeg">
-            </div>
-            <div class="info">
-                <div class="sub1">
-                    <p class="title1">Daily Mix 5</p>
-                </div>
-                <div class="sub2">
-                    <p class="details">Atif Aslam,Kailash Khair,Salman Ali </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="box-card">
-        <div class="card-button">
-            <div class="album">
-                <img class="album-pic" src="Album/album-6.jpeg">
-            </div>
-            <div class="info">
-                <div class="sub1">
-                    <p class="title1">Daily Mix 6</p>
-                </div>
-                <div class="sub2">
-                    <p class="details">A.P.Dhillon,Diljit Singh,Jonita Gandhi</p>
-                </div>
-            </div>
-        </div>
-    </div>  
-</div>
-
-<div class="User-name">
-    <div class="Riya">
-        <p class="h1">Your favourite artistes</p>
-    </div>
-    <div class="Show">
-        <p class="h2">Show all</p>
-    </div>
-</div>
-
-<div class="grid-album">
-    <div class="box-card">
-        <div class="card-button">
-            <div class="album">
-                <img class="artist-pic" src="artists/artist-1.jpeg">
-            </div>
-            <div class="info">
-                <div class="sub1">
-                    <p class="title1">Shreya Ghoshal</p>
-                </div>
-                <div class="sub2">
-                    <p class="details">Artist</p>
-                </div>
-            </div>
-        </div>
-    </div>  
+    
  
-    <div class="box-card">
-        <div class="card-button">
-            <div class="album">
-                <img class="artist-pic" src="artists/artist-2.jpeg">
-            </div>
-            <div class="info">
-                <div class="sub1">
-                    <p class="title1">Kishore Kumar</p>
-                </div>
-                <div class="sub2">
-                    <p class="details">Artist</p>
-                </div>
-            </div>
-        </div>
-    </div>  
-
-    <div class="box-card">
-        <div class="card-button">
-            <div class="album">
-                <img class="artist-pic" src="artists/artist-3.jpeg">
-            </div>
-            <div class="info">
-                <div class="sub1">
-                    <p class="title1">Lata Mangeshkar</p>
-                </div>
-                <div class="sub2">
-                    <p class="details">Artist</p>
-                </div>
-            </div>
-        </div>
-    </div>  
-
-    <div class="box-card">
-        <div class="card-button">
-            <div class="album">
-                <img class="artist-pic" src="artists/artist-4.jpeg">
-            </div>
-            <div class="info">
-                <div class="sub1">
-                    <p class="title1">Sunidhi Chauhan</p>
-                </div>
-                <div class="sub2">
-                    <p class="details">Artist</p>
-                </div>
-            </div>
-        </div>
-    </div>  
-
-    <div class="box-card">
-        <div class="card-button">
-            <div class="album">
-                <img class="artist-pic" src="artists/artist-5.jpeg">
-            </div>
-            <div class="info">
-                <div class="sub1">
-                    <p class="title1">Mika Singh</p>
-                </div>
-                <div class="sub2">
-                    <p class="details">Artist</p>
-                </div>
-            </div>
-        </div>
-    </div>  
-
-    <div class="box-card">
-        <div class="card-button">
-            <div class="album">
-                <img class="artist-pic" src="artists/artist-6.jpeg">
-            </div>
-            <div class="info">
-                <div class="sub1">
-                    <p class="title1">Jonita Gandhi</p>
-                </div>
-                <div class="sub2">
-                    <p class="details">Artist</p>
-                </div>
-            </div>
-        </div>
-    </div>  
-
-</div>
-
-
 </body>
 </html>
